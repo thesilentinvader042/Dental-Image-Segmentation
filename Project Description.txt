@@ -1,0 +1,13 @@
+Segmenting teeth from dental panoramic X-rays (OPGs) is important for accurate
+diagnosis and treatment planning. Doing this by hand is slow and can vary between
+experts. In this project, we built an AI-based tool to automatically separate teeth from
+the background in grayscale OPGs. Our model uses a U-Net architecture with a
+MobileNetV2 encoder, starting with ImageNet weights to speed up learning. The
+dataset contains around 115 images, already split into training, validation, and test
+sets using Roboflow. Each image is resized to 512×256 and normalised before
+training. We combine Binary Cross-Entropy and Dice Loss to improve both pixel
+accuracy and shape matching. The model’s performance is measured using IoU and
+Dice Coefficient, and early results show it can segment teeth effectively. In the
+future, this approach can be extended to separate healthy and defective teeth, and
+even be integrated into dental diagnosis software.
+
